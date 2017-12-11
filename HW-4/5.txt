@@ -1,0 +1,35 @@
+A)
+l1: if A < E then goto l3
+l2: goto l10
+l3: jj1 = - E A
+l4: if jj1 < G then goto l6
+l5: goto l8
+l6: E = A + F
+l7: goto l4
+l8: G = A + F
+l9: goto l1
+l10:
+B)
+l1: if A < E then goto l3
+l2: goto l10
+l3: jj1 = E - A
+l4: if jj1 < G then goto l6
+l5: goto l8
+l6: E = A + F
+l7: goto l4
+l8: G = A + F
+l9: goto l1
+l10:
+C)
+l1: if A < E then goto l3
+l2: goto l12
+l3: E - A
+l4: if (3) < G then goto l6
+l5: goto l9
+l6: A + F
+l7: E = (6)
+l8: goto l4
+l9: A + F
+l10: G = (10)
+l11: goto l1
+l12:

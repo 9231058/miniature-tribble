@@ -1,0 +1,49 @@
+bool S() {
+    int isave = input_pointer;
+    if (input_symbol == 'a') {
+        advance();
+		if (A()) {
+			if (B()) {
+				return TRUE;
+			} else {
+				input_pointer = isave;
+				return FALSE;
+			}
+		} else {
+			input_pointer = isave;
+			return FALSE;
+		}
+    }
+}
+
+bool A() {
+	int isave = input_pointer;
+    if (input_symbol == 'b') {
+        advance();
+		if (A()) {
+			return TRUE;
+		} else {
+			input_pointer = isave;
+			return FALSE;
+		}
+	} else if (input_symbol == '$') {
+		return TRUE;
+	} else {
+		return FALSE;
+	}
+}
+
+bool B() {
+	int isave = input_pointer;
+    if (input_symbol == 'c') {
+        advance();
+		if (input_symbol == 'b') {
+			return TRUE;
+		} else {
+			input_pointer = isave;
+			return FALSE;
+		}
+	} else {
+		return FALSE;
+	}
+}
